@@ -2,9 +2,23 @@
 <resources>
     <style name="buttonStyle">
 
-        <item name="android:textColor">#2C2929</item>
+        <item name="android:textColor">#D1E7F4</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:background">@drawable/gradient_black_lightgray</item>
-        <item name="android:backgroundTint">#A69B9B</item>
+
+        <item name="android:backgroundTint">#0091EA</item>
+
     </style>
+
+    <style name="fragStyle">
+        <item name="android:background">@drawable/gradient_black_lightgray</item>
+        <item name="android:backgroundTint">#051677</item>
+        <item name="android:backgroundTintMode">multiply</item>
+    </style>
+
+    <style name="textStyle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

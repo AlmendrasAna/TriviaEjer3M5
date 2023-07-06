@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeFragment">
+    tools:context=".WelcomeFragment"
+    style="@style/fragStyle">
 
     <TextView
         android:id="@+id/textView"
@@ -14,24 +15,25 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Bienvenido a Logo Trivia, ingresa tu nombre para comenzar  "
-        android:textColor="#6200EA"
-        android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        style="@style/textStyle" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/nameTxt1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:background="#304FFE"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="text"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -40,10 +42,13 @@
         style="@style/buttonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:text="COMENZAR"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintEnd_toEndOf="@+id/nameTxt1"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/nameTxt1"
+        app:layout_constraintTop_toBottomOf="@+id/nameTxt1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

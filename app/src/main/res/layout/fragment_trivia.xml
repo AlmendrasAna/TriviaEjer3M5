@@ -2,12 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TriviaFragment">
 
     <TextView
-        android:id="@+id/nameTxt"
+        android:id="@+id/nameTxtShow"
+        style="@style/textStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -26,9 +28,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="@+id/nameTxt"
-        app:layout_constraintStart_toStartOf="@+id/nameTxt"
-        app:layout_constraintTop_toBottomOf="@+id/nameTxt"
+        app:layout_constraintEnd_toEndOf="@+id/nameTxtShow"
+        app:layout_constraintStart_toStartOf="@+id/nameTxtShow"
+        app:layout_constraintTop_toBottomOf="@+id/nameTxtShow"
         app:srcCompat="@drawable/what" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -39,39 +41,61 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroupTrivia"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:background="#304FFE"
         app:layout_constraintBottom_toTopOf="@+id/sendB"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2">
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
             android:id="@+id/op1RadioB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Facebook" />
+            android:background="@color/white"
+            android:backgroundTint="#0091EA"
+            android:checked="false"
+            android:text="Facebook"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/op2RadioB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Twitter" />
+            android:background="@color/white"
+            android:backgroundTint="#00B8D4"
+            android:text="Twitter"
+            android:textColor="@color/white"
+            android:textColorHighlight="#530E0E"
+            android:textColorLink="#9E8282"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/op3RadioB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Whatsapp" />
+            android:background="@color/white"
+            android:backgroundTint="#0091EA"
+            android:text="Whatsapp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/op4RadioB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Instagram" />
+            android:background="@color/white"
+            android:backgroundTint="#00B8D4"
+            android:text="Instagram"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
     </RadioGroup>
 
@@ -85,6 +109,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupTrivia" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

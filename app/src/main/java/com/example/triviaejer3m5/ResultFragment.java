@@ -3,10 +3,15 @@ package com.example.triviaejer3m5;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.triviaejer3m5.databinding.FragmentResultBinding;
+import com.example.triviaejer3m5.databinding.FragmentTriviaBinding;
+import com.example.triviaejer3m5.databinding.FragmentWelcomeBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,15 +55,22 @@ public class ResultFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            mParam1 = getArguments().getString("nombre");
+            mParam2 = getArguments().getString("mensaje");
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_result, container, false);
+        FragmentResultBinding binding = FragmentResultBinding.inflate(getLayoutInflater());
+        binding.resultTxt.setText(mParam2);
+
+        binding.ageinB.setOnClickListener(v -> {
+            Bundle bundle = new Bundle();
+            bundle.putString("nombre", mParam1);
+            Navigation.findNavController(binding.getRoot()).navigate(R.id.action_resultFragment_to_triviaFragment, bundle);
+                });
+        return binding.getRoot();
     }
 }

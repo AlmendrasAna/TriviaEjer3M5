@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="buttonStyle">
+
+        <item name="android:textColor">#2C2929</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/gradient_black_lightgray</item>
+        <item name="android:backgroundTint">#A69B9B</item>
+    </style>
+</resources>
